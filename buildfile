@@ -1,20 +1,23 @@
 intf_libs = # Interface dependencies.
 impl_libs = # Implementation dependencies.
-#import impl_libs += libhello%lib{hello}
 
-./: lib{plf-nanotimer} doc{README.md} manifest
+upstream = $src_root/upstream
 
-lib{plf-nanotimer}: {hxx ixx txx}{**} $impl_libs $intf_libs
+./: doc{README.md} manifest
+
+./: lib{nanotimer} exe{tests}
+
+lib{nanotimer}: $upstream/{hxx}{**} $impl_libs $intf_libs
 
 # Build options.
 #
-cxx.poptions =+ "-I$out_root" "-I$src_root"
+cxx.poptions =+ "-I$out_root/upstream" "-I$src_root/upstream"
 
 # Export options.
 #
-lib{plf-nanotimer}:
+lib{nanotimer}:
 {
-  cxx.export.poptions = "-I$out_root" "-I$src_root"
+  cxx.export.poptions = "-I$out_root/upstream" "-I$src_root/upstream"
   cxx.export.libs = $intf_libs
 }
 
@@ -25,3 +28,11 @@ lib{plf-nanotimer}:
   install         = include/
   install.subdirs = true
 }
+
+
+### Tests/Benchmark
+
+exe{tests} : tests/cxx{**} lib{nanotimer}
+exe{tests} : test = true
+
+

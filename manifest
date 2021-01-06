@@ -1,12 +1,15 @@
 : 1
 name: plf-nanotimer
-version: 0.1.0-a.0.z
-summary: plf-nanotimer C++ library
-license: other: proprietary ; Not free/open source.
-description-file: README.md
-url: https://example.org/plf-nanotimer
-email: mjklaim@gmail.com
-#build-error-email: mjklaim@gmail.com
+version: 1.3.0-a.0.z
+summary: A simple C++ 03/11/etc timer class for ~microsecond-precision cross-platform benchmarking.
+license: zLib
+src-url: https://github.com/mattreecebentley/plf_nanotimer.git
+doc-url: https://plflib.org/nanotimer.htm
+email: mattreecebentley@gmail.com
+package-email: mjklaim@gmail.com
+build-email: mjklaim@gmail.com
+
+requires: c++ >= 17
+
 depends: * build2 >= 0.13.0
 depends: * bpkg >= 0.13.0
-#depends: libhello ^1.0.0
