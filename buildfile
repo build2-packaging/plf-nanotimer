@@ -26,7 +26,7 @@ lib{nanotimer}:
 {hxx ixx txx}{*}:
 {
   install         = include/
-  install.subdirs = true
+  install.subdirs = false
 }
 
 
