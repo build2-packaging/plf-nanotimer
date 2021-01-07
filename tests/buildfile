@@ -1,0 +1,7 @@
+
+import libnanotimer = plf-nanotimer%lib{nanotimer}
+
+exe{tests} : cxx{**} $libnanotimer
+exe{tests} : test = true
+
+

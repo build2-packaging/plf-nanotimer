@@ -3,11 +3,9 @@ impl_libs = # Implementation dependencies.
 
 upstream = $src_root/upstream
 
-./: doc{README.md} manifest
+./: doc{README.md} manifest tests/
 
-./: lib{nanotimer} exe{tests}
-
-lib{nanotimer}: $upstream/{hxx}{**} $impl_libs $intf_libs
+./: lib{nanotimer}: $upstream/{hxx}{**} $impl_libs $intf_libs
 
 # Build options.
 #
@@ -28,11 +26,3 @@ lib{nanotimer}:
   install         = include/
   install.subdirs = false
 }
-
-
-### Tests/Benchmark
-
-exe{tests} : tests/cxx{**} lib{nanotimer}
-exe{tests} : test = true
-
-
