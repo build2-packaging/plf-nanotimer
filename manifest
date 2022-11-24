@@ -14,5 +14,5 @@ requires: c++ >= 17
 depends: * build2 >= 0.13.0
 depends: * bpkg >= 0.13.0
 
-builds: all : -emscripten ; Emscripten is not supported yet
+builds: all : -wasm ; Emscripten is not supported yet
 
