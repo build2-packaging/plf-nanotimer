@@ -7,7 +7,7 @@ We use a git submodule targetting a specific version of the library for each pac
 PLF NanoTimer
 ----------
 
- - PLF Colony: https://plflib.org/nanotimer.htm
+ - PLF NanoTimer: https://plflib.org/nanotimer.htm
     - Also contain the change history at the end of the page.
  - Repository: https://github.com/mattreecebentley/plf_nanotimer/
 
