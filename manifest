@@ -13,3 +13,5 @@ requires: c++ >= 17
 
 depends: * build2 >= 0.13.0
 depends: * bpkg >= 0.13.0
+
+build-exclude: *emscripten* # Not supported yet
