@@ -1,0 +1,6 @@
+: 1
+name: plf-nanotimer
+version: 1.7.0
+summary: A simple C++ 03/11/etc timer class for ~microsecond-precision\
+ cross-platform benchmarking.
+license: zLib
